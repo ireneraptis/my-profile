@@ -1,0 +1,124 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  border-radius: 50%;
+}
+
+.img_rad {
+  display: flex;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  justify-items:last baseline;
+  align-items:baseline;
+}
+
+.txt-center {
+  text-align: center;
+  justify-self:center;
+  margin-left: 50px;
+
+}
+
+.card_img {
+  width: 150px;
+}
+
+#card_left {
+  width: 50%;
+  justify-items: end;
+}
+
+.container {
+  background-color:darkgrey;
+  
+  /* set height + overflow */
+  --scroll-gap: 2em;
+  height: 100vh;
+  overflow: auto;
+  padding: var(--scroll-gap);
+  
+  /* set scroll snap 👇 */
+  scroll-snap-type: y mandatory;
+}
+
+.child {
+  scroll-snap-align: center;
+
+  align-items: center;
+  width: 700px;
+  margin: 40px auto;
+  border-radius: 0.4em;
+  padding: 1.25em;
+  box-shadow: 0 0.9px 1.5px lightgray,
+              0 3.1px 5.5px lightgray,
+              0 14px 25px lightgray;
+}
+
+.child:not(:last-child) {
+  margin-bottom: var(--scroll-gap); /* grid gap */
+}
+
+.child:nth-child(1) {
+  background-color: lightgray;
+}
+
+.child:nth-child(1) h1 {
+  color: lightgray;
+}
+
+.child:nth-child(2) {
+  background-color: lightgray;
+}
+
+.child:nth-child(2) h1 {
+  color: lightgray;
+}
+
+.child:nth-child(3) {
+  background-color: lightgray;
+  display: flex;
+
+}
+
+.child:nth-child(3) h1 {
+  color: hsl(165, 100%, 96%);
+}
+
+.child:nth-child(4) {
+  background-color: lightgray;
+  display: flex;
+}
+
+.child:nth-child(4) h1 {
+  color: hsl(165, 100%, 96%);
+}
+
+.child:nth-child(5) {
+  background-color: lightgray;
+  display: flex;
+}
+
+.child:nth-child(5) h1 {
+  color: hsl(165, 100%, 96%);
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
